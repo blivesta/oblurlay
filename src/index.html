@@ -1,0 +1,50 @@
+---
+layout: default
+title: 
+class: home
+base_url: "./"
+---
+<main class="site-masthead" role="main">
+  <div class="container">
+    <span class="text-icon text-icon-lg text-icon-outline">O</span>
+    <h1>{{ site.title }}</h1>
+    <p class="lead">{{ page.title }}</p>
+    <p><a href="{{ site.repo_url }}" class="btn btn- btn-lg">Download on GitHub</a></p>
+    {% include social-buttons.html %}  
+    <p>Currently v{{ site.current_version }}</p>
+  </div><!-- /.container -->
+</main>
+
+<div class="site-body">
+  <div class="site-body-inner container">
+
+    <div class="site-section">
+      <h2 class="site-section-title">Usage</h2>
+      <p class="lead"></p>
+      <div class="site-section-body">
+{% highlight html %}
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ page.base_url }}dist/css/{{ site.title }}.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="{{ page.base_url }}dist/js/{{ site.title }}.js"></script>
+<script>
+ $(document).ready(function() {
+   $('.oblurlay').oblurlay();
+ });  
+</script>
+
+<div class="oblurlay">
+  <div class="oblurlay-upper">   
+    upper layer
+  </div>
+  <div class="oblurlay-contents">
+    contents layer
+  </div>
+</div>
+{% endhighlight %}
+      </div>
+    </div>
+
+  </div><!-- /.container -->
+</div><!-- /.site-body -->
+  
