@@ -1,0 +1,24 @@
+/*!
+ * oblurlay v0.0.0
+ * 
+ * Licensed under MIT
+ * Copyright 2013-2014 blivesta
+ * http://blivesta.com
+ */
+
+.site-header a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #242d35;
+}
+.site-header-inner {
+  padding-top: 8px;
+}
+.site-masthead {
+  padding-top: 120px !important;
+  background-color: #eee;
+  background-image: url(../images/example.jpg);
+  background-position: center;
+  background-size: cover;
+}
+/*# sourceMappingURL=layout .css.map */
