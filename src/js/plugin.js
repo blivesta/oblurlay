@@ -36,14 +36,7 @@
           $(window).on('scroll',function(){
              methods.scrollY.apply(_this);
           });
-
-          $(window).bind('touchstart.'+namespace, function() {
-          });
-          $(window).bind('touchmove.'+namespace, function() {
-          });
-          $(window).bind('touchend.'+namespace, function() {
-          });
-
+          
         }        
       }); // end each
     },
