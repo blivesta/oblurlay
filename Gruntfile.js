@@ -372,7 +372,7 @@
 
   // ベンダーファイルのインストール →　コンパイル　→　テスト　→　ウォッチ
   // ====================================================
-  grunt.registerTask('build', [
+  grunt.registerTask('b', [
     'clean',
     'bower',
     'build-less',
