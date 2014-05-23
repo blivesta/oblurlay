@@ -3,3 +3,4 @@ node_modules
 _gh_pages
 src/vendor
 bower_components
+*.psd
