@@ -367,7 +367,7 @@
     'jshint:source',
     //'jscs:source',
     'csslint',
-    'validation'
+    // 'validation'
   ]);
 
   // ベンダーファイルのインストール →　コンパイル　→　テスト　→　ウォッチ
