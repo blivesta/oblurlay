@@ -1,9 +1,9 @@
 oblurlay
 ==================
-oblurlay is implement a blur view of iOS7 style with css and jquery 
+oblurlay is implement a blur view of iOS7 style with svg and jquery
 
 ##Example
-http://blivesta.github.io/oblurlay
+http://git.blivesta.com/oblurlay
 
 ##Setup
 ~~~ go
@@ -12,13 +12,18 @@ http://blivesta.github.io/oblurlay
 <script src="dist/js/oblurlay.min.js"></script>
 
 <script>
- $(document).ready(function() {
-   $('.oblurlay').oblurlay();
- });  
+$(document).ready(function() {
+  $('.oblurlay').oblurlay({
+    'upper':'oblurlay-upper',
+    'contents':'oblurlay-contents',
+    'clone':'oblurlay-contents-clone',
+    'svgBlur':30
+  });
+});
 </script>
 
 <div class="oblurlay">
-  <div class="oblurlay-upper">   
+  <div class="oblurlay-upper">
     upper layer
   </div>
   <div class="oblurlay-contents">
@@ -27,6 +32,10 @@ http://blivesta.github.io/oblurlay
 </div>
 
 ~~~
+
+##Browers
+- chrome
+- safari
 
 ##License
 Released under the MIT license.
