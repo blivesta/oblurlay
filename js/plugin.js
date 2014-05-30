@@ -5,7 +5,8 @@
       options = $.extend({
         'upper':'oblurlay-upper',
         'contents':'oblurlay-contents',
-        'clone':'oblurlay-contents-clone'
+        'clone':'oblurlay-contents-clone',
+        'svgBlur':30
       }, options);
       return this.each(function(){
         var _this = this;
@@ -17,22 +18,11 @@
           $this.data(namespace, {
             options: options
           });
-                  
-          var $cloneWrap = $('<div>').addClass(options.clone);
-          var $clone = $('.' + options.contents).clone();
-          
-          $(this).append('<svg class="oblurlay-svg"><filter id="oblurlay-svg-filter"><feGaussianBlur stdDeviation="10" /></filter></svg>');
-          $cloneWrap.append($clone);
-          $('.' + options.upper).append($cloneWrap);
-          $('.' + options.clone).css({
-            '-webkit-filter':'blur(40px)',
-            'filter':'url(#oblurlay-svg-filter)'
-          });
-          $('.oblurlay-svg').css({
-            'position': 'absolute',
-            'top':'0'
-          });
 
+          $this.append('<svg class="oblurlay-svg"><filter id="oblurlay-svg-filter"><feGaussianBlur stdDeviation="10" /></filter></svg>');
+    
+          methods.clone.apply(_this);
+      
           $(window).on('scroll',function(){
              methods.scrollY.apply(_this);
           });
@@ -40,17 +30,36 @@
         }        
       }); // end each
     },
+    
+    clone: function(){
+      var $this = $(this);
+      var options = $this.data(namespace).options;
+      var $cloneWrap = $('<div>').addClass(options.clone);
+      var $clone = $('.' + options.contents).clone();
+
+      $cloneWrap.append($clone);
+      $('.' + options.upper).append($cloneWrap);
+      $('.' + options.clone).css({
+        '-webkit-filter':'blur('+options.svgBlur+'px)',
+        'filter':'url(#oblurlay-svg-filter)'
+      });
+      $('.oblurlay-svg').css({
+        'position': 'absolute',
+        'top':'0'
+      });
+    },
+    
     scrollY: function(){
       var $this = $(this);
-      options = $this.data(namespace).options;
+      var options = $this.data(namespace).options;
       translation = 'translate3d(0,' + (-$(window).scrollTop() + 'px') + ',0)';
-      //$('.' + options.clone).css('transform', translation);
       $('.' + options.clone).css({
         '-webkit-transform': translation,
         '-moz-transform': translation,
         'transform': translation
       });
     },
+    
     destroy: function(){
       return this.each(function(){
         var $this = $(this);
@@ -59,6 +68,7 @@
       });
     }
   };
+  
   $.fn.oblurlay = function(method){
     if ( methods[method] ) {
       return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
@@ -68,4 +78,5 @@
       $.error( 'Method ' +  method + ' does not exist on jQuery.'+namespace);
     }    
   };
+  
 })(jQuery);

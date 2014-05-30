@@ -18,7 +18,7 @@
 
   <!-- Vendor CSS -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="//rawgithub.com/blivesta/ashiba/master/archive/0.3.1/css/ashiba.min.css">
+  <link rel="stylesheet" href="//rawgithub.com/blivesta/ashiba/master/archive/0.3.2/css/ashiba.min.css">
 
   <link rel="stylesheet" href="./css/oblurlay.css">
   <link rel="stylesheet" href="./css/layout.css">
@@ -52,16 +52,20 @@
     <p><a href="https://github.com/blivesta/oblurlay" class="btn btn- btn-lg">Download on GitHub</a></p>
     <ul class="site-social">
   <li>
-    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=blivesta&amp;repo=oblurlay&amp;type=fork&amp;count=true" width="100" height="20"></iframe>
+    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=blivesta&amp;repo=oblurlay&amp;type=fork&amp;count=false" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
   </li>
   <li>
-    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=blivesta&amp;repo=oblurlay&amp;type=watch&amp;count=true" width="100" height="20"></iframe>
+    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=blivesta&amp;repo=oblurlay&amp;type=watch&amp;count=false" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
   </li>
   <li>
-    <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-url="http://git.blivesta.com/oblurlay/" data-related="blivesta" data-count="true" data-hashtags="">Tweet</a>
+    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=blivesta&type=follow&count=false" allowtransparency="true" frameborder="0" scrolling="0" width="132" height="20"></iframe>
+  </li>
+  <li>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-url="http://git.blivesta.com/oblurlay/" data-related="blivesta" data-count="false" data-hashtags="">Tweet</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   </li>
-</ul>         
+</ul>       
+  
     <p>Currently v0.0.0</p>
   </div><!-- /.container -->
 </main>
@@ -73,12 +77,17 @@
       <h2 class="site-section-title">Setup</h2>
       <p class="lead"></p>
       <div class="site-section-body">
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;./dist/css/oblurlay.css&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;./dist/css/oblurlay.min.css&quot;</span><span class="nt">&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;./dist/js/oblurlay.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;./dist/js/oblurlay.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script&gt;</span>
  <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-   <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.oblurlay&#39;</span><span class="p">).</span><span class="nx">oblurlay</span><span class="p">();</span>
+   <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.oblurlay&#39;</span><span class="p">).</span><span class="nx">oblurlay</span><span class="p">({</span>
+     <span class="s1">&#39;upper&#39;</span><span class="o">:</span><span class="s1">&#39;oblurlay-upper&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;contents&#39;</span><span class="o">:</span><span class="s1">&#39;oblurlay-contents&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;clone&#39;</span><span class="o">:</span><span class="s1">&#39;oblurlay-contents-clone&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;svgBlur&#39;</span><span class="o">:</span><span class="mi">30</span>
+   <span class="p">});</span>
  <span class="p">});</span>  
 <span class="nt">&lt;/script&gt;</span>
 
@@ -104,16 +113,20 @@
     <br>Code licensed under the MIT license.</p>
         <ul class="site-social">
   <li>
-    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=blivesta&amp;repo=oblurlay&amp;type=fork&amp;count=true" width="100" height="20"></iframe>
+    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=blivesta&amp;repo=oblurlay&amp;type=fork&amp;count=false" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
   </li>
   <li>
-    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=blivesta&amp;repo=oblurlay&amp;type=watch&amp;count=true" width="100" height="20"></iframe>
+    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=blivesta&amp;repo=oblurlay&amp;type=watch&amp;count=false" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
   </li>
   <li>
-    <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-url="http://git.blivesta.com/oblurlay/" data-related="blivesta" data-count="true" data-hashtags="">Tweet</a>
+    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=blivesta&type=follow&count=false" allowtransparency="true" frameborder="0" scrolling="0" width="132" height="20"></iframe>
+  </li>
+  <li>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-url="http://git.blivesta.com/oblurlay/" data-related="blivesta" data-count="false" data-hashtags="">Tweet</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   </li>
 </ul>       
+
   </div>
 </footer>
     </div>
