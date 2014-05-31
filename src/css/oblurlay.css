@@ -1,5 +1,5 @@
 /*!
- * oblurlay v0.0.0
+ * oblurlay v0.1.0
  * 
  * Licensed under MIT
  * Copyright 2013-2014 blivesta
