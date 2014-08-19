@@ -1,6 +1,7 @@
-validation-*.json
 node_modules
-_gh_pages
-src/vendor
 bower_components
-*.psd
+_gh_pages
+docs/vendor
+docs/assets/css
+docs/css
+docs/js

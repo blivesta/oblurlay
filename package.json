@@ -1,7 +1,7 @@
 {
   "name": "oblurlay",
   "description": "",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": [],
   "homepage": "http://git.blivesta.com/oblurlay",
   "author": "blivesta",
@@ -12,6 +12,8 @@
     "type": "git"
   },
   "source": "./src",
+  "docs": "./docs",
+  "assets": "./docs/assets",
   "dist": "./dist",
   "public": "./_gh_pages",
   "dependencies": {},

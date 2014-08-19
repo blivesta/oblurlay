@@ -1,9 +1,9 @@
 /*!
- * oblurlay v0.1.0
+ * oblurlay v0.1.1
  * 
  * Licensed under MIT
- * Copyright 2013-2014 blivesta
- * http://blivesta.com
+ * Author : blivesta
+ * 
  */
 
 .site-header a {
@@ -16,9 +16,15 @@
 }
 .site-masthead {
   padding-top: 120px !important;
+  text-align: center;
   background-color: #eee;
   background-image: url(../images/example.jpg);
   background-position: center;
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
 }
-/*# sourceMappingURL=layout .css.map */
+.site-masthead a {
+  font-weight: bold;
+  color: #fff;
+}
+/*# sourceMappingURL=docs.css.map */

@@ -4,14 +4,15 @@ title: implement a blur view of iOS7 style with css and jquery.
 class: site-home
 base_url: "./"
 ---
-<main class="site-masthead" role="main">
+<main class="site-masthead " role="main">
   <div class="container">
-    <span class="text-icon text-icon-lg text-icon-outline">O</span>
     <h1>{{ site.title }}</h1>
     <p class="lead">{{ page.title }}</p>
-    <p><a href="{{ site.repo_url }}" class="btn btn- btn-lg">Download on GitHub</a></p>
+    <p><a href="{{ site.repo_url }}" class="button button-border button-lg">Download on GitHub</a></p>
     {% include social-buttons.html %}  
-    <p>Currently v{{ site.current_version }}</p>
+    <p>Currently v{{ site.current_version }}  ･  Authtor : <a href="https://twitter.com/blivesta/">@blivesta</a>
+    <br>
+    Licensed under the MIT.</p>
   </div><!-- /.container -->
 </main>
 
