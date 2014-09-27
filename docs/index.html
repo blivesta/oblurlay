@@ -1,41 +1,44 @@
 ---
-layout: default
-title: implement a blur view of iOS7 style with css and jquery.
+layout: base
+title: Implement a blur view of iOS style with css,svg and jquery
 class: site-home
 base_url: "./"
 ---
-<main class="site-masthead " role="main">
+<main class="masthead " role="main">
   <div class="container">
     <h1>{{ site.title }}</h1>
     <p class="lead">{{ page.title }}</p>
     <p><a href="{{ site.repo_url }}" class="button button-border button-lg">Download on GitHub</a></p>
-    {% include social-buttons.html %}  
-    <p>Currently v{{ site.current_version }}  ･  Authtor : <a href="https://twitter.com/blivesta/">@blivesta</a>
+    {% include social-link.html %}  
+    <p>Currently v{{ site.current_version }}  ･  Authtor :&nbsp; 
+      <span class="icon-blivesta icon-sm"></span>&nbsp;
+      <a href="http://blivesta.com/" target="_blank">blivesta</a>
     <br>
     Licensed under the MIT.</p>
+    {% include adpacks.html %}
   </div><!-- /.container -->
 </main>
 
-<div class="site-body">
-  <div class="site-body-inner container">
+<div class="body">
+  <div class="body-inner container">
 
-    <div class="site-section">
-      <h2 class="site-section-title">Setup</h2>
+    <div class="section">
+      <h2 class="section-title">Setup</h2>
       <p class="lead"></p>
-      <div class="site-section-body">
+      <div class="section-body">
 {% highlight html %}
 <link rel="stylesheet" href="{{ page.base_url }}dist/css/{{ site.title }}.min.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="{{ page.base_url }}dist/js/{{ site.title }}.min.js"></script>
 <script>
- $(document).ready(function() {
-   $('.oblurlay').oblurlay({
-     'upper':'oblurlay-upper',
-     'contents':'oblurlay-contents',
-     'clone':'oblurlay-contents-clone',
-     'svgBlur':30
-   });
- });  
+$(document).ready(function() {
+  $('.oblurlay').oblurlay({
+    upper: "oblurlay-upper",
+    contents: "oblurlay-contents",
+    clone: "oblurlay-contents-clone",
+    svgBlur: 30
+  });
+});  
 </script>
 
 <div class="oblurlay">
@@ -51,5 +54,5 @@ base_url: "./"
     </div>
 
   </div><!-- /.container -->
-</div><!-- /.site-body -->
+</div><!-- /.body -->
   

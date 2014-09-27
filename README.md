@@ -1,6 +1,6 @@
 oblurlay
 ==================
-oblurlay is implement a blur view of iOS7 style with svg and jquery
+Implement a blur view of iOS style with css,svg and jquery
 
 ##Example
 http://git.blivesta.com/oblurlay
