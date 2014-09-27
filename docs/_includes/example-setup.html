@@ -1,0 +1,40 @@
+<p class="lead">Step 1: Link required files</p>
+{% highlight html %}
+<!-- {{ site.repo }} CSS -->
+<link rel="stylesheet" href="{{ page.base_url }}css/{{ site.repo }}.min.css">
+
+<!-- vendor js -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<!-- {{ site.repo }} js -->
+<script src="{{ page.base_url }}dist/js/jquery.{{ site.repo }}.min.js"></script>
+{% endhighlight %}
+
+<p class="lead">Step 2: HTML markup</p>
+{% highlight html %}
+<body>
+
+	<div class="oblurlay">
+		<div class="oblurlay-upper">   
+			upper layer
+		</div>
+		<div class="oblurlay-contents">
+			contents layer
+		</div>
+	</div>
+
+</body>
+{% endhighlight %}
+
+
+<p class="lead">Step 3: Call the animsition</p>
+{% highlight js %}
+$(document).ready(function() {
+  $('.oblurlay').oblurlay({
+    upper: "oblurlay-upper",
+    contents: "oblurlay-contents",
+    clone: "oblurlay-contents-clone",
+    svgBlur: 30
+  });
+});  
+{% endhighlight %}

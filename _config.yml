@@ -7,11 +7,12 @@ destination:      ./_gh_pages
 encoding:         UTF-8
 url:              http://git.blivesta.com/oblurlay/
 title:            oblurlay
+discription:      Implement a blur view of iOS style with css,svg and jquery.
 author:           blivesta
 author_url:       http://blivesta.com
 current_version:  0.1.1
 twitter:          blivesta
-tag:              
+tag:              jquery,svg
 repo:             oblurlay
 repo_url:         https://github.com/blivesta/oblurlay
 git_fork_btn:     http://ghbtns.com/github-btn.html?user=blivesta&amp;repo=oblurlay&amp;type=fork&amp;count=true

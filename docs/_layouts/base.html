@@ -1,11 +1,15 @@
 {% include head.html %}
 <body class="{{ page.class }}">
+  
+  {% include adpacks.html %}
+
   <div class="site-wrapper oblurlay">
     {% include header.html %}
     <div class="oblurlay-contents">
-		    {{ content }}
-        {% include footer.html %}
+	    {{ content }}
+      {% include footer.html %}
     </div>
   </div><!-- /.site-wrapper -->
+
 </body>
 </html>
