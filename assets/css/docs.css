@@ -391,25 +391,31 @@ h4 {
 .navbar-right {
   float: right !important;
 }
+.header a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #242d35;
+}
+.header-inner {
+  padding-top: 8px;
+}
 .masthead {
   position: relative;
   padding: 15px;
-  padding-top: 20px;
+  padding-top: 130px;
   color: #fff;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .4);
   background-color: #242d35;
-  background-image: -webkit-linear-gradient(45deg, #242d35 0%, #85a1bb 100%);
-  background-image:      -o-linear-gradient(45deg, #242d35 0%, #85a1bb 100%);
-  background-image:         linear-gradient(45deg, #242d35 0%, #85a1bb 100%);
+  background-image: url(../images/example.jpg);
+  background-position: center;
+  -webkit-background-size: cover;
+          background-size: cover;
 }
 .masthead h1 {
   margin-bottom: 5px;
   font-size: 50px;
   font-weight: 700;
   opacity: .95;
-}
-.masthead .lead {
-  opacity: .7;
 }
 .masthead p {
   margin: 0 auto 20px;
@@ -423,7 +429,6 @@ h4 {
 }
 @media (min-width: 768px) {
   .site-home .masthead {
-    padding-top: 60px;
     padding-bottom: 60px;
   }
   .site-home .masthead h1 {
@@ -436,19 +441,18 @@ h4 {
   }
 }
 .adpacks {
-  bottom: 10px;
-  left: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   z-index: 99;
-  max-width: 340px;
+  width: 100%;
   min-height: 130px;
   padding: 15px;
   margin: 0;
-  margin-bottom: 30px;
   font-size: 12px;
   text-align: left!important;
-  background: #fff;
-  background: rgba(255, 255, 255, .2);
-  border-radius: 4px;
+  background: #000;
+  background: rgba(0, 0, 0, .4);
 }
 .adpacks:before,
 .adpacks:after {
@@ -458,9 +462,17 @@ h4 {
 .adpacks:after {
   clear: both;
 }
-.site-home .adpacks {
-  margin-right: auto;
-  margin-left: auto;
+.adpacks a {
+  color: #fff;
+}
+@media (min-width: 1024px) {
+  .adpacks {
+    top: 170px;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    width: 160px;
+  }
 }
 .adpacks-wrap .adpacks-img {
   float: left;
@@ -468,6 +480,7 @@ h4 {
 }
 .adpacks-wrap .adpacks-img img {
   margin-right: 15px;
+  margin-bottom: 10px;
 }
 .adpacks-poweredby {
   display: block;
@@ -516,7 +529,7 @@ h4 {
 }
 .footer {
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 160px;
   color: #777;
   background-color: #ddd;
   border-top: 1px solid #fff;
@@ -527,19 +540,9 @@ h4 {
 .site-home .footer {
   text-align: center;
 }
-.site-home .header a {
-  font-size: 20px;
-  font-weight: bold;
-  color: #242d35;
-}
-.site-home .header-inner {
-  padding-top: 8px;
-}
-.site-home .masthead {
-  padding-top: 160px !important;
-  background-image: url(../images/example.jpg);
-  background-position: center;
-  -webkit-background-size: cover;
-          background-size: cover;
+@media (min-width: 1024px) {
+  .footer {
+    padding-bottom: 40px;
+  }
 }
 /*# sourceMappingURL=docs.css.map */
