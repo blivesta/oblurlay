@@ -2,10 +2,10 @@ oblurlay
 ==================
 Implement a blur view of iOS style with css,svg and jquery
 
-##Example
+## Example
 http://git.blivesta.com/oblurlay
 
-##Setup
+## Setup
 ~~~ go
 <link rel="stylesheet" href="dist/css/oblurlay.min.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -33,9 +33,9 @@ $(document).ready(function() {
 
 ~~~
 
-##Browsers
+## Browsers
 - chrome
 - safari
 
-##License
+## License
 Released under the MIT license.
